@@ -2,12 +2,11 @@
 
 include 'autoload.inc.php';
 
+$first_num = $_POST['first_num'];
+$second_num = $_POST['second_num'];
 $operator = $_POST['symbol'];
-$first_number = $_POST['first_num'];
-$second_number = $_POST['second_num'];
 
-$calcu = new Calc((int)$first_number, (int)$second_number, $operator);
-
-echo $calcu->calculate();
+$calculation = new Calc($first_num, $second_num, $operator);
+echo $calculation->calculate();
 
 ?>
